@@ -1,5 +1,5 @@
-const forceCollide = 0
-const distanceViaLayer = [170, 120, 80, 50]
+const forceCollide = 30
+const distanceViaLayer = [100, 80, 70, 60]
 // const forceCollide = 20
 // const distanceViaLayer = [100, 80, 60, 20]
 const group = {

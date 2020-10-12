@@ -11,10 +11,10 @@ const svg = d3.select("body").append("svg")
     .attr("height", height)
 
 const simulation = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id(d => d.id).distance(d => d.distance ))
-    .force("charge", d3.forceManyBody())
+    .force("link", d3.forceLink(links).strength(2).id(d => d.id).distance(d => d.distance ))
+    .force("charge", d3.forceManyBody().strength(-100).distanceMax(600))
     .force("center", d3.forceCenter(width / 2, height / 2))
-    .force("collide", d3.forceCollide(forceCollide))
+    // .force("collide", d3.forceCollide(forceCollide))
 
 const link = svg.append("g")
     .attr("stroke", "#999")
