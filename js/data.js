@@ -1,5 +1,5 @@
 const forceCollide = 30
-const distanceViaLayer = [100, 80, 70, 60]
+const distanceViaLayer = [80, 70, 60, 50, 40, 30]
 // const forceCollide = 20
 // const distanceViaLayer = [100, 80, 60, 20]
 const group = {
@@ -11,6 +11,7 @@ const group = {
   ForLoop: 5,
   Function: 6,
   Browser: 7,
+  Core: 8
 }
 const data = {
   nodes: [
@@ -75,6 +76,18 @@ const data = {
       {id: "資源請求", text: "資源請求", title: "Request", group: group['Browser'], important: 10},
       {id: "儲存機制", text: "儲存機制", title: "Web Storage", group: group['Browser'], important: 10},
       {id: "垃圾回收機制", text: "垃圾回收機制", title: "Garbage Collection", group: group['Browser'], important: 10},
+    {id: "核心", text: "核心", title: "Core", group: group['Core'], important: 10},
+      {id: "解析", text: "解析", title: "Parse", group: group['Core'], important: 10},
+        {id: "抽象語法樹", text: "抽象語法樹", title: "Abstract Syntax Tree", group: group['Core'], important: 10},
+      {id: "同步 & 非同步", text: "同步 & 非同步", title: "Sync. & Async.", group: group['Core'], important: 10},
+        {id: "呼叫堆疊", text: "呼叫堆疊", title: "Call Stack", group: group['Core'], important: 10},
+          {id: "執行上下文", text: "執行上下文", title: "Execution Context", group: group['Core'], important: 10},
+            {id: "提升", text: "提升", title: "Hoisting", group: group['Core'], important: 10},
+            {id: "作用域", text: "作用域", title: "Scope", group: group['Core'], important: 10},
+        {id: "事件循環", text: "事件循環", title: "Event Loop", group: group['Core'], important: 10},
+        {id: "任務隊列", text: "任務隊列", title: "Job Queue", group: group['Core'], important: 10},
+          {id: "微觀任務", text: "微觀任務", title: "Microtask", group: group['Core'], important: 10},
+          {id: "宏觀任務", text: "宏觀任務", title: "Macrotask", group: group['Core'], important: 10},
   ],
   links: [
     {target: "JavaScript", source: "簡介", value: 1, distance: distanceViaLayer[0]},
@@ -137,5 +150,18 @@ const data = {
       {target: "瀏覽器", source: "資源請求", value: 1, distance: distanceViaLayer[1]},
       {target: "瀏覽器", source: "儲存機制", value: 1, distance: distanceViaLayer[1]},
       {target: "瀏覽器", source: "垃圾回收機制", value: 1, distance: distanceViaLayer[1]},
+    {target: "JavaScript", source: "核心", value: 1, distance: distanceViaLayer[0]},
+      {target: "核心", source: "解析", value: 1, distance: distanceViaLayer[1]},
+        {target: "解析", source: "抽象語法樹", value: 1, distance: distanceViaLayer[2]}, 
+      {target: "核心", source: "同步 & 非同步", value: 1, distance: distanceViaLayer[1]},
+        {target: "同步 & 非同步", source: "呼叫堆疊", value: 1, distance: distanceViaLayer[2]},
+          {target: "呼叫堆疊", source: "執行上下文", value: 1, distance: distanceViaLayer[3]},
+            {target: "執行上下文", source: "提升", value: 1, distance: distanceViaLayer[4]},
+            {target: "執行上下文", source: "作用域", value: 1, distance: distanceViaLayer[4]},
+        {target: "同步 & 非同步", source: "事件循環", value: 1, distance: distanceViaLayer[2]},
+          {target: "事件循環", source: "任務隊列", value: 1, distance: distanceViaLayer[3]},
+            {target: "任務隊列", source: "微觀任務", value: 1, distance: distanceViaLayer[4]},
+            {target: "任務隊列", source: "宏觀任務", value: 1, distance: distanceViaLayer[4]},
+      
   ]
 }
