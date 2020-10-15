@@ -1,11 +1,17 @@
 @import 'vendor/reset';
 
+@import 'component/graph';
+@import 'component/tabbar';
+@import 'component/lightbox';
+
 html, body {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    font-family: 微軟正黑體;
 }
 
-.node-group {
-    user-select: none;
-    cursor: pointer;
+.main-wrapper {
+    width: 100%;
+    height: 100%;
 }

@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript Survey</title>
     <script src="./js/library/d3.v5.js"></script>
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <script src="./js/data.js"></script>
+    <main class="main-wrapper">
+        <nav class="tab-bar-wrapper">
+            <div class="tab-bar-title">JavaScript Survey<br></div>
+            <ul class="tab-bar-lists">
+                <li class="tab-bar-item">
+                    <a href="https://github.com/shawnlin0201/JavaScript-Knowledge-Force-Directed-Graph" target="_blink" class="item-link">GitHub</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="graph-wrapper"></section>
+        <section class="lightbox-wrapper mode-dark">
+            <div class="btn-close">X</div>
+            <ul class="website-list">
+
+            </ul>
+        </section>
+    </main>
+    <script src="./js/website-list.js"></script>
+    <script src="./js/graph-setting.js"></script>
+    <script src="./js/graph-progress.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>

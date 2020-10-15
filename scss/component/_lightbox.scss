@@ -1,0 +1,120 @@
+$mainColor: #EFD81D;
+$decoColor: black;
+
+.lightbox-wrapper {
+    position: fixed;
+    top:100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    font-family: 微軟正黑體;
+    font-weight: bold;
+    padding: 32px;
+    box-sizing: border-box;
+    &.mode-light {        
+        background: $mainColor;
+        color: $decoColor;
+        .website-list {
+            border: 3px solid $decoColor;
+            .website-item {
+                border: 3px solid $decoColor;
+                .btn-enter {
+                    background: $decoColor;
+                    color: $mainColor;
+                    &:hover {
+                        background: $mainColor;
+                        color: $decoColor;
+                    }
+                }
+            }
+            .tag-item {
+                border: 2px solid $decoColor;
+            }
+        }
+    }
+    &.mode-dark {
+        background: $decoColor;
+        color: $mainColor;
+        .website-list {
+            border: 3px solid $mainColor;
+            .website-item {
+                border: 3px solid $mainColor;
+                .btn-enter {
+                    background: $mainColor;
+                    color: $decoColor;
+                    &:hover {
+                        background: $decoColor;
+                        color: $mainColor;
+                    }
+                }
+            }
+            .tag-item {
+                border: 2px solid $mainColor;
+            }
+        }
+    }
+    &.is-active {
+        top:0;
+    }
+    .btn-close {
+        position: absolute;
+        right: 64px;
+        top: 64px;
+        z-index: 9;
+        font-size: 32px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        user-select: none;
+        cursor: pointer;
+    }
+    .website-list {
+        position: relative;
+        height: 100%;
+        padding: 72px 24px 24px;
+        box-sizing: border-box;
+        font-size: 0px;
+        .search-title {
+            position: absolute;
+            left: 50%;
+            top: 24px;
+            font-size: 32px;
+            transform: translate(-50%);
+            width: 100%;
+            text-align: center;
+        }
+        .website-item {
+            position: relative;
+            display: inline-block;
+            width: calc(50% - 24px);
+            font-size: 20px;
+            margin:12px;
+            padding: 24px;
+            box-sizing: border-box;
+            .author { margin-bottom: 12px;}
+            .indtroduction { margin-bottom: 12px;}
+            .tags-list {
+                .tag-item {
+                    display: inline-block;
+                }
+            }
+            .btn-enter {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                padding: 8px;
+                font-size: 18px;
+                border: 3px solid none;
+                &:hover {
+                    transition: 0.5s;
+                }
+            }
+        }
+        .tag-item {
+            font-size: 16px;
+            padding: 6px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+    }
+}

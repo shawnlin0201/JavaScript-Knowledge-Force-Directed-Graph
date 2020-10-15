@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -52,9 +53,15 @@ table {
   border-spacing: 0;
 }
 
-html, body {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.graph-wrapper {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 60px);
+  background: #fffef8;
 }
 
 .node-group {
@@ -63,5 +70,199 @@ html, body {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+}
+
+.tab-bar-wrapper {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: #EFD81D;
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: bold;
+}
+
+.tab-bar-wrapper .tab-bar-title {
+  font-size: 32px;
+}
+
+.tab-bar-wrapper .tab-bar-item {
+  font-size: 22px;
+}
+
+.lightbox-wrapper {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: 微軟正黑體;
+  font-weight: bold;
+  padding: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.lightbox-wrapper.mode-light {
+  background: #EFD81D;
+  color: black;
+}
+
+.lightbox-wrapper.mode-light .website-list {
+  border: 3px solid black;
+}
+
+.lightbox-wrapper.mode-light .website-list .website-item {
+  border: 3px solid black;
+}
+
+.lightbox-wrapper.mode-light .website-list .website-item .btn-enter {
+  background: black;
+  color: #EFD81D;
+}
+
+.lightbox-wrapper.mode-light .website-list .website-item .btn-enter:hover {
+  background: #EFD81D;
+  color: black;
+}
+
+.lightbox-wrapper.mode-light .website-list .tag-item {
+  border: 2px solid black;
+}
+
+.lightbox-wrapper.mode-dark {
+  background: black;
+  color: #EFD81D;
+}
+
+.lightbox-wrapper.mode-dark .website-list {
+  border: 3px solid #EFD81D;
+}
+
+.lightbox-wrapper.mode-dark .website-list .website-item {
+  border: 3px solid #EFD81D;
+}
+
+.lightbox-wrapper.mode-dark .website-list .website-item .btn-enter {
+  background: #EFD81D;
+  color: black;
+}
+
+.lightbox-wrapper.mode-dark .website-list .website-item .btn-enter:hover {
+  background: black;
+  color: #EFD81D;
+}
+
+.lightbox-wrapper.mode-dark .website-list .tag-item {
+  border: 2px solid #EFD81D;
+}
+
+.lightbox-wrapper.is-active {
+  top: 0;
+}
+
+.lightbox-wrapper .btn-close {
+  position: absolute;
+  right: 64px;
+  top: 64px;
+  z-index: 9;
+  font-size: 32px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.lightbox-wrapper .website-list {
+  position: relative;
+  height: 100%;
+  padding: 72px 24px 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0px;
+}
+
+.lightbox-wrapper .website-list .search-title {
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  font-size: 32px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.lightbox-wrapper .website-list .website-item {
+  position: relative;
+  display: inline-block;
+  width: calc(50% - 24px);
+  font-size: 20px;
+  margin: 12px;
+  padding: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.lightbox-wrapper .website-list .website-item .author {
+  margin-bottom: 12px;
+}
+
+.lightbox-wrapper .website-list .website-item .indtroduction {
+  margin-bottom: 12px;
+}
+
+.lightbox-wrapper .website-list .website-item .tags-list .tag-item {
+  display: inline-block;
+}
+
+.lightbox-wrapper .website-list .website-item .btn-enter {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px;
+  font-size: 18px;
+  border: 3px solid none;
+}
+
+.lightbox-wrapper .website-list .website-item .btn-enter:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.lightbox-wrapper .website-list .tag-item {
+  font-size: 16px;
+  padding: 6px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 微軟正黑體;
+}
+
+.main-wrapper {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=index.css.map */

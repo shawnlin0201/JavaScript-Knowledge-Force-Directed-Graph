@@ -1,0 +1,10 @@
+.graph-wrapper {
+    width: 100%;
+    height: calc(100% - 60px);
+    background: #fffef8;
+}
+
+.node-group {
+    user-select: none;
+    cursor: pointer;
+}
